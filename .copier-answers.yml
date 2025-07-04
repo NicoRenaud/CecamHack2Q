@@ -1,0 +1,28 @@
+# Changes here will be overwritten by Copier
+SelectCitation:
+- AddCitationFile_flag
+SelectCodeQualityFeatures:
+- AddLocalTests_flag
+- SelectGitHubActions_flag
+SelectCommunityFeatures:
+- AddCodeConduct_flag
+- AddContributing_flag
+SelectDocumentationFeatures:
+- AddLocalDocumentation_flag
+SelectGitHubActions:
+- AddGitHubActionBuild_flag
+SelectPublishReleaseFeatures:
+- SelectCitation_flag
+_commit: 0.6.1
+_src_path: https://github.com/nlesc/python-template.git
+code_of_conduct_email: nicolas.gm.renaud@gmail.com
+copyright_holder: CECAM
+email: nicolas.gm.renaud@gmail.com
+full_name: Nico Renaud
+github_organization: NicoRenaud
+keywords: quantum chemistry
+license: Apachev2
+package_name: cecam_2qchem
+package_short_description: 2nd quantization package for quantum chemstry
+template_profile: recommended
+version: 0.1.0

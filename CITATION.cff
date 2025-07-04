@@ -1,0 +1,14 @@
+# YAML 1.2
+---
+cff-version: "1.2.0"
+title: "cecam_2qchem"
+authors:
+  - family-names: Renaud
+    given-names: Nico
+    orcid: "https://orcid.org/0000-0000-0000-0000"
+date-released: 2025-07-04
+version: "0.1.0"
+repository-code: "https://github.com/NicoRenaud/cecam_2qchem"
+keywords:
+  - "quantum chemistry"
+message: "If you use this software, please cite it using these metadata."
