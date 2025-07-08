@@ -1,5 +1,7 @@
+import numpy as np
+
 def convert_to_mvmc(h1, h2, pruning_threshold=1.e-8):
-  # See [Neuscamman (2013), https://doi.org/10.1063/1.4829835] for the definition of t
+  # See [Neuscamman (2013), https://doi.org/10.1063/1.4829835] for the definition of h2_mVMC
   h1_mVMC = -h1
   h2_mVMC = h2 - 0.5 * np.einsum("prrq->pq", h2)
 
