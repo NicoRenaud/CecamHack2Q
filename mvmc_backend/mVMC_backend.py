@@ -1,6 +1,17 @@
 import numpy as np
 
 def convert_to_mvmc(h1, h2, pruning_threshold=1.e-8):
+  """Converts the one- and two-electron tensors into the format expected by mVMC
+
+  Args:
+      h1 (np.ndarray): The one-electron tensor - shape (norb, norb)
+      h2 (np.ndarray): The two-electron tensor - shape (norb, norb, norb, norb)
+      pruning_threshold (float, optional): Values smaller than this number are ignored.
+        Defaults to 1.e-8.
+
+  Returns:
+      str: A string for the Ntransfer files for mVMC
+  """
   # See [Neuscamman (2013), https://doi.org/10.1063/1.4829835] for the definition of h2_mVMC
   h1_mVMC = -h1
   h2_mVMC = h2 - 0.5 * np.einsum("prrq->pq", h2)
@@ -31,3 +42,5 @@ def convert_to_mvmc(h1, h2, pruning_threshold=1.e-8):
       for spin_prime in [0,1]:
         out_2 += "{} {} {} {} {} {} {} {} {} 0.\n".format(x, spin, y, spin, z, spin_prime, w, spin_prime, h2_mVMC[x,y,z,w]/2)
   return out_1, out_2
+
+# functionality to be added
